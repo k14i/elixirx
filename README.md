@@ -7,15 +7,14 @@ This repository aims to make [Elixir][1] itself simpler, easier, more convenient
 
     $ git clone git@github.com:keithseahus/elixir-plus.git
     $ git clone git@github.com:elixir-lang/elixir.git
+    $ cp -rfp elixir-plus/lib/elixir/* elixir/lib/elixir/
+    $ cp -rfp elixir-plus/lib/elixir/test/elixir/* elixir/lib/elixir/test/elixir/
     $ cd elixir
-    $ git apply --stat ../elixir-plus/patch/foo.patch
-    $ git apply --check ../elixir-plus/patch/foo.patch
-    $ git am --signoff < ../elixir-plus/patch/foo.patch
     $ make clean test
 
 ## Functions
 
-* `Enum.group_by/4`
+* `Enum.Plus.group_by/4`
 
   [1]: https://github.com/elixir-lang/elixir
 
