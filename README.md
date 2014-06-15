@@ -1,23 +1,21 @@
 elixir-enhancements
 ===================
 
-This repository aims to make Elixir itself simpler, easier, more convenient and more sophisticated.
+This repository aims to make [Elixir][1] itself simpler, easier, more convenient and more sophisticated.
 
-Usage
------
+## Usage
 
-`````
-$ git clone git@github.com:keithseahus/elixir-enhancements.git
-$ git clone git@github.com:elixir-lang/elixir.git
-$ cd elixir
-$ git apply --stat ../elixir-enhancements/patches/foo.patch
-$ git apply --check ../elixir-enhancements/patches/foo.patch
-$ git am --signoff < ../elixir-enhancements/patches/foo.patch
-$ make clean test
-`````
+    $ git clone git@github.com:keithseahus/elixir-enhancements.git
+    $ git clone git@github.com:elixir-lang/elixir.git
+    $ cd elixir
+    $ git apply --stat ../elixir-enhancements/patches/foo.patch
+    $ git apply --check ../elixir-enhancements/patches/foo.patch
+    $ git am --signoff < ../elixir-enhancements/patches/foo.patch
+    $ make clean test
 
-Functions
----------
+## Functions
 
-* ```Enum.group_by/4```
+* `Enum.group_by/4`
+
+  [1]: https://github.com/elixir-lang/elixir
 
