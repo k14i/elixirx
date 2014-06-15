@@ -16,3 +16,8 @@ $ git am --signoff < ../elixir-enhancements/patches/foo.patch
 $ make clean test
 `````
 
+Functions
+---------
+
+* ```Enum.group_by/4```
+
