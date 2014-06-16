@@ -5,26 +5,26 @@ defmodule EnumX do
   Provides a set of algorithms that enumerate over collections according to the
   `Enumerable` protocol:
 
-      iex> Enum.Plus.map([1, 2, 3], fn(x) -> x * 2 end)
+      iex> EnumX.map([1, 2, 3], fn(x) -> x * 2 end)
       [2,4,6]
 
   Some particular types, like dictionaries, yield a specific format on
   enumeration. For dicts, the argument is always a `{key, value}` tuple:
 
       iex> dict = %{a: 1, b: 2}
-      iex> Enum.Plus.map(dict, fn {k, v} -> {k, v * 2} end)
+      iex> EnumX.map(dict, fn {k, v} -> {k, v * 2} end)
       [a: 2, b: 4]
 
-  Note that the functions in the `Enum.Plus` module are eager: they always start
+  Note that the functions in the `EnumX` module are eager: they always start
   the enumeration of the given collection. The `Stream` module allows
   lazy enumeration of collections and provides infinite streams.
 
-  Since the majority of the functions in `Enum.Plus` enumerate the whole
+  Since the majority of the functions in `EnumX` enumerate the whole
   collection and return a list as result, infinite streams need to
   be carefully used with such functions, as they can potentially run
   forever. For example:
 
-      Enum.Plus.each Stream.cycle([1,2,3]), &IO.puts(&1)
+      EnumX.each Stream.cycle([1,2,3]), &IO.puts(&1)
 
   """
 
