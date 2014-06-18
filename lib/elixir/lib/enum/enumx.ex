@@ -69,7 +69,7 @@ defmodule EnumX do
 
   """
   @spec group_by(t, dict, (element -> any), (element -> any)) :: dict when dict: Dict.t
-  def group_by(collection, dict, fun, fun_entry) do
+  def group_by(collection, dict \\ %{}, fun, fun_entry) do
     Enum.reduce(collection, dict, fn(entry, categories) ->
       Dict.update(categories, fun.(entry), [fun_entry.(entry)], &[fun_entry.(entry)|&1])
     end)
