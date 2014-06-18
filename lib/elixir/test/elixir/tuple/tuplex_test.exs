@@ -4,7 +4,7 @@ defmodule TupleXTest do
   use ExUnit.Case, async: true
 
   test :reverse do
-    assert reverse({:a, :b, :c}) == {:c, :b, :a}
+    assert TupleX.reverse({:a, :b, :c}) == {:c, :b, :a}
   end
 
 end
