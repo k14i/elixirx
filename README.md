@@ -15,6 +15,7 @@ This repository aims to make [Elixir][1] itself simpler, easier, more convenient
 ## Functions
 
 * `EnumX.group_by/4`
+* `TupleX.reverse/1`
 
   [1]: https://github.com/elixir-lang/elixir
 
