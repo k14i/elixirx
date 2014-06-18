@@ -62,9 +62,9 @@ defmodule EnumX do
 
   ## Examples
 
-      iex> EnumX.group_by(~w{ant buffalo cat dingo}, %{}, &String.length/1, &String.capitalize/1)
+      iex> EnumX.group_by(~w{ant buffalo cat dingo}, &String.length/1, &String.capitalize/1)
       %{3 => ["Cat", "Ant"], 5 => ["Dingo"], 7 => ["Buffalo"]}
-      iex> EnumX.group_by([a: 1, b: 0, c: 4, d: 0, e: 1, f: 1], %{}, fn({_, v}) -> v end, fn({k, _}) -> to_string(k) end)
+      iex> EnumX.group_by([a: 1, b: 0, c: 4, d: 0, e: 1, f: 1], fn({_, v}) -> v end, fn({k, _}) -> to_string(k) end)
       %{0 => ["d", "b"], 1 => ["f", "e", "a"], 4 => ["c"]}
 
   """
