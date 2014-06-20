@@ -14,10 +14,18 @@ This repository aims to make [Elixir][1] itself simpler, easier, more convenient
 
 ## Functions
 
-* `EnumX.group_by/4`
-* `TupleX.reverse/1`
-* `ListX.sort_by_value/1`
-* `ListX.values/1`
+### EnumX
+
+* `group_by/4`
+
+### TupleX
+
+* `reverse/1`
+
+### ListX
+
+* `sort_by_value/1`
+* `values/1`
 
   [1]: https://github.com/elixir-lang/elixir
 
