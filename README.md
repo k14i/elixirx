@@ -3,7 +3,7 @@ ElixirX -- Elixir eXtention library
 
 This repository aims to make [Elixir][1] itself simpler, easier, more convenient and more sophisticated.
 
-## Usage
+## Installation
 
     $ git clone git@github.com:keithseahus/elixirx.git
     $ git clone git@github.com:elixir-lang/elixir.git
