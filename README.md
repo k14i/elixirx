@@ -26,6 +26,7 @@ This repository aims to make [Elixir][1] itself simpler, easier, more convenient
 
 * `sort_by_value/1`
 * `values/1`
+* `group_by_value/1`
 
   [1]: https://github.com/elixir-lang/elixir
 
