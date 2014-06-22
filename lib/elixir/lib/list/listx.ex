@@ -46,4 +46,28 @@ defmodule ListX do
     values = Enum.map(sort_by_value(list), fn(x) -> elem(x, 1) end) |> Enum.uniq
   end
 
+  @doc """
+  Splits a collection into groups.
+
+  The result is a tupled list where each key is
+  a group and each value is a list of elements from `collection`.
+  Ordering is not necessarily preserved.
+
+  ## Examples
+
+      iex> ListX.group_by_value([a: 0, b: 1, c: 2, d: 0, e: 1, f: 4])
+      [{0, [:d, :a]}, {1, [:e, :b]}, {2, [:c]}, {4, [:f]}]
+
+  """
+  @spec group_by_value(list) :: list
+  def group_by_value(list) when hd(list) |> is_tuple and tl(list) |> is_list do
+    slist = Enum.sort(list, &(elem(&1, 1) < elem(&2, 1)))
+    values = Enum.sort(slist, &(elem(&1, 1) < elem(&2, 1)))
+      |> Enum.map(fn(x) -> elem(x, 1) end)
+      |> Enum.uniq
+    keys = Enum.map(values, fn(x) -> Enum.filter_map(slist, &(elem(&1, 1) == x), &(elem(&1, 0))) end)
+    Enum.with_index(values)
+      |> Enum.map(fn({v,i}) -> {v, Enum.at(keys, i)} end)
+  end
+
 end
