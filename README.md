@@ -17,6 +17,7 @@ This repository aims to make [Elixir][1] itself simpler, easier, more convenient
 ### EnumX
 
 * `group_by/4`
+* `average/1`
 
 ### TupleX
 
