@@ -74,4 +74,21 @@ defmodule EnumX do
       Dict.update(categories, fun.(entry), [fun_entry.(entry)], &[fun_entry.(entry)|&1])
     end)
   end
+
+  @doc """
+  Returns the average of all values.
+
+  Raises `ArithmeticError` if collection contains a non-numeric value.
+
+  ## Examples
+
+    iex> EnumX.average([1, 2, 3, 5, 8, 13, 21, 34])
+    10.875
+
+  """
+  @spec average(t) :: number
+  def average(list) when hd(list) |> is_number and tl(list) |> is_list do
+    Enum.sum(list) / Enum.count(list)
+  end
+
 end
