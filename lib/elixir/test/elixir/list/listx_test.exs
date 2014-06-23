@@ -14,4 +14,9 @@ defmodule ListXTest do
   test :group_by_value do
     assert ListX.group_by_value([a: 0, b: 1, c: 2, d: 0, e: 1, f: 4]) == [{0, [:d, :a]}, {1, [:e, :b]}, {2, [:c]}, {4, [:f]}]
   end
+
+  test :separate_key_value do
+    assert ListX.separate_key_value([a: 0, b: 1, c: 2, d: 0, e: 1, f: 4]) == {[:a, :b, :c, :d, :e, :f], [0, 1, 2, 0, 1, 4]}
+  end
+
 end

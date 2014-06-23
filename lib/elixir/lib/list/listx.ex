@@ -70,4 +70,22 @@ defmodule ListX do
       |> Enum.map(fn({v,i}) -> {v, Enum.at(keys, i)} end)
   end
 
+  @doc """
+  Splits a tupled list into two collections of keys and values.
+
+  The result is a tuple.
+
+  ## Examples
+
+      iex> ListX.separate_key_value([a: 0, b: 1, c: 2, d: 0, e: 1, f: 4])
+      {[:a, :b, :c, :d, :e, :f], [0, 1, 2, 0, 1, 4]}
+
+  """
+  @spec separate_key_value(list) :: tuple
+  def separate_key_value(list) when hd(list) |> is_tuple and tl(list) |> is_list do
+    keys = Enum.map(list, fn(x) -> elem(x, 0) end) |> Enum.uniq
+    values = Enum.map(list, fn(x) -> elem(x, 1) end)
+    {keys, values}
+  end
+
 end
