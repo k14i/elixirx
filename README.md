@@ -30,5 +30,9 @@ This repository aims to make [Elixir][1] itself simpler, easier, more convenient
 * `group_by_value/1`
 * `separate_key_value/1`
 
+### MathX
+
+* `absolute/1`
+
   [1]: https://github.com/elixir-lang/elixir
 
