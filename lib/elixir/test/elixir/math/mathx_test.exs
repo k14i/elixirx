@@ -18,4 +18,16 @@ defmodule MathXTest do
     assert MathX.remainder(0, 1) == 0
   end
 
+  test :even? do
+    assert MathX.even?(-4) == true
+    assert MathX.even?(-3) == false
+    assert MathX.even?(-2) == true
+    assert MathX.even?(-1) == false
+    assert MathX.even?(0) == true
+    assert MathX.even?(1) == false
+    assert MathX.even?(2) == true
+    assert MathX.even?(3) == false
+    assert MathX.even?(4) == true
+  end
+
 end
