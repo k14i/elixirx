@@ -36,4 +36,18 @@ defmodule MathX do
     dividend - Float.floor(dividend / divisor) * divisor |> absolute
   end
 
+  @doc """
+  Determines if an integer is even.
+
+  Returns `true` if `n` is an even number, otherwise `false`.
+  """
+  @spec even?(integer) :: boolean
+  def even?(num) when is_integer(num) do
+    if remainder(num, 2) == 0 do
+      true
+    else
+      false
+    end
+  end
+
 end
