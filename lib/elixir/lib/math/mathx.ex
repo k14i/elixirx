@@ -50,4 +50,17 @@ defmodule MathX do
     end
   end
 
+  @doc """
+  Determines if an integer is even.
+
+  Returns `true` if `n` is an even number, otherwise `false`.
+  """
+  def odd?(num) when is_integer(num) do
+    if even?(num) do
+      false
+    else
+      true
+    end
+  end
+
 end
