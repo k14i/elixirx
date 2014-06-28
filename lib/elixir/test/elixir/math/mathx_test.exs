@@ -30,4 +30,16 @@ defmodule MathXTest do
     assert MathX.even?(4) == true
   end
 
+  test :odd? do
+    assert MathX.odd?(-4) == false
+    assert MathX.odd?(-3) == true
+    assert MathX.odd?(-2) == false
+    assert MathX.odd?(-1) == true
+    assert MathX.odd?(0) == false
+    assert MathX.odd?(1) == true
+    assert MathX.odd?(2) == false
+    assert MathX.odd?(3) == true
+    assert MathX.odd?(4) == false
+  end
+
 end
