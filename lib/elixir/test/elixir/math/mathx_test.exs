@@ -42,4 +42,14 @@ defmodule MathXTest do
     assert MathX.odd?(4) == false
   end
 
+  test :median do
+    assert MathX.median([1]) == 1
+    assert MathX.median([1, 2]) == 1.5
+    assert MathX.median([1, 2, 3]) == 2
+    assert MathX.median([1, 2, 3, 4]) == 2.5
+    assert MathX.median([4, 3, 2, 1]) == 2.5
+    assert MathX.median([1.2, 3.4]) == 2.3
+    assert MathX.median([1, -2]) == -0.5
+  end
+
 end

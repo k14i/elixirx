@@ -63,4 +63,28 @@ defmodule MathX do
     end
   end
 
+  @doc """
+  Return the median of a number list.
+
+  ## Examples
+
+      iex> MathX.median([1, 2, 3])
+      2
+      iex> MathX.median([1, 2, 3, 4])
+      2.5
+
+  """
+  @spec median(list) :: number
+  def median(list) when hd(list) |> is_number and tl(list) |> is_list do
+    slist = Enum.sort(list)
+    ptr = (Enum.count(slist) + 1) / 2 - 1
+    ptr_int   = ptr |> to_string |> Integer.parse |> elem(0)
+    ptr_float = ptr |> to_string |> Integer.parse |> elem(1)
+    if ptr_float == ".0" do
+      Enum.at(slist, ptr_int)
+    else
+      (Enum.at(slist, Float.floor(ptr)) + Enum.at(slist, Float.ceil(ptr))) / 2
+    end
+  end
+
 end

@@ -36,6 +36,7 @@ This repository aims to make [Elixir][1] itself simpler, easier, more convenient
 * `remainder/2`
 * `even?/1`
 * `odd?/1`
+* `median/1`
 
   [1]: https://github.com/elixir-lang/elixir
 
