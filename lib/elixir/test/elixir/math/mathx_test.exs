@@ -52,4 +52,8 @@ defmodule MathXTest do
     assert MathX.median([1, -2]) == -0.5
   end
 
+  test :average do
+    assert MathX.average([1, 2, 3, 5, 8, 13, 21, 34]) == 10.875
+  end
+
 end

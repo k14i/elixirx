@@ -8,9 +8,5 @@ defmodule EnumXTest.List do
            %{0 => [:d, :a], 1 => [:e, :b], 2 => [:c], 4 => [:f]}
   end
 
-  test :average do
-    assert EnumX.average([1, 2, 3, 5, 8, 13, 21, 34]) == 10.875
-  end
-
 end
 
