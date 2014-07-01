@@ -8,5 +8,8 @@ defmodule EnumXTest.List do
            %{0 => [:d, :a], 1 => [:e, :b], 2 => [:c], 4 => [:f]}
   end
 
+  test :without_index do
+    assert EnumX.without_index([{1, 0}, {2, 1}, {3, 2}]) == [1, 2, 3]
+  end
 end
 

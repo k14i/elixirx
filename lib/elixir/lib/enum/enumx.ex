@@ -75,4 +75,18 @@ defmodule EnumX do
     end)
   end
 
+  @doc """
+  The opposite against Enum.with_index/1
+
+  ## Examples
+
+      iex> EnumX.without_index([{1, 0}, {2, 1}, {3, 2}])
+      [1, 2, 3]
+
+  """
+  @spec without_index(list) :: list
+  def without_index(list) do
+    Enum.into(list, [], fn({k,_}) -> k end)
+  end
+
 end
