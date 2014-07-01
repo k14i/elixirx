@@ -17,6 +17,7 @@ This repository aims to make [Elixir][1] itself simpler, easier, more convenient
 ### EnumX
 
 * `group_by/4`
+* `without_index/1`
 
 ### TupleX
 
@@ -37,7 +38,6 @@ This repository aims to make [Elixir][1] itself simpler, easier, more convenient
 * `odd?/1`
 * `median/1`
 * `average/1`
-* `powers_of/2`
 
   [1]: https://github.com/elixir-lang/elixir
 
