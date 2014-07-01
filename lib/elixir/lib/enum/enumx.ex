@@ -85,7 +85,7 @@ defmodule EnumX do
 
   """
   @spec without_index(list) :: list
-  def without_index(list) do
+  def without_index(list) when hd(list) |> is_tuple and tl(list) |> is_list do
     Enum.into(list, [], fn({k,_}) -> k end)
   end
 
