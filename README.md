@@ -29,6 +29,7 @@ This repository aims to make [Elixir][1] itself simpler, easier, more convenient
 * `values/1`
 * `group_by_value/1`
 * `separate_key_value/1`
+* `replace_all/2`
 
 ### MathX
 

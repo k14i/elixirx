@@ -19,4 +19,8 @@ defmodule ListXTest do
     assert ListX.separate_key_value([a: 0, b: 1, c: 2, d: 0, e: 1, f: 4]) == {[:a, :b, :c, :d, :e, :f], [0, 1, 2, 0, 1, 4]}
   end
 
+  test :replace_all do
+    assert ListX.replace_all([nil, 0, :a, "b", 'c', [0, 1, 2], {0, 1}, %{:a => 0}], 0) == [0, 0, 0, 0, 0, 0, 0, 0]
+  end
+
 end

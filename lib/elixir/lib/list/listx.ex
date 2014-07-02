@@ -88,4 +88,24 @@ defmodule ListX do
     {keys, values}
   end
 
+  @doc """
+  Returns a list with replaced values.
+
+  ## Examples
+
+      iex> ListX.replace_all([nil, 0, :a, "b", 'c', [0, 1, 2], {0, 1}, %{:a => 0}], 0)
+      [0, 0, 0, 0, 0, 0, 0, 0]
+
+  """
+  @spec replace_all(list, any) :: list
+  def replace_all(list, value) do
+    do_replace_all(list, value)
+  end
+  defp do_replace_all([], _value) do
+    []
+  end
+  defp do_replace_all([h|t], value) do
+    [ value | do_replace_all(t, value) ]
+  end
+
 end
