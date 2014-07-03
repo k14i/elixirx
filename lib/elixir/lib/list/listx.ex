@@ -108,4 +108,26 @@ defmodule ListX do
     [ value | do_replace_all(t, value) ]
   end
 
+  @doc """
+  Generate and fullfill a collection with the specified numbers of value.
+
+  ## Examples
+
+      iex> ListX.fill(8, nil)
+      [nil, nil, nil, nil, nil, nil, nil, nil]
+
+  """
+  @spec fill(integer, any) :: list
+  def fill(num, value) do
+    do_fill([], num, value)
+  end
+  defp do_fill(list, num, value) do
+    cond do
+      Enum.count(list) < num ->
+        list = do_fill(list ++ [value], num, value)
+      true ->
+        list
+    end
+  end
+
 end
