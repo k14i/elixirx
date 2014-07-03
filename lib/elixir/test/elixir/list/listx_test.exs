@@ -23,4 +23,8 @@ defmodule ListXTest do
     assert ListX.replace_all([nil, 0, :a, "b", 'c', [0, 1, 2], {0, 1}, %{:a => 0}], 0) == [0, 0, 0, 0, 0, 0, 0, 0]
   end
 
+  test :fill do
+    assert ListX.fill(8, nil) == [nil, nil, nil, nil, nil, nil, nil, nil]
+  end
+
 end
