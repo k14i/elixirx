@@ -103,4 +103,18 @@ defmodule MathX do
     Enum.sum(list) / Enum.count(list)
   end
 
+  @doc """
+  Compute the sqrt of (x^2 + y^2).
+
+  ## Examples
+
+    iex> MathX.hypot(2,3)
+    3.605551275463989
+
+  """
+  @spec hypot(number, number) :: number
+  def hypot(x, y) do
+    :math.sqrt(:math.pow(x,2) + :math.pow(y,2))
+  end
+
 end
