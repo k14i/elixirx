@@ -56,4 +56,8 @@ defmodule MathXTest do
     assert MathX.average([1, 2, 3, 5, 8, 13, 21, 34]) == 10.875
   end
 
+  test :hypot do
+    assert MathX.hypot(2,3) == 3.605551275463989
+  end
+
 end
