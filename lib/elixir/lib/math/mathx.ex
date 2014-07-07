@@ -117,4 +117,26 @@ defmodule MathX do
     :math.sqrt(:math.pow(x,2) + :math.pow(y,2))
   end
 
+  @doc """
+  Compute sin(pi * x)/(pi * x) if x != 0, and 1 if x == 0.
+
+  ## Examples
+
+    iex> MathX.sinc(0)
+    1
+    iex> MathX.sinc(10)
+    -3.898171832519376e-17
+
+  """
+  @spec sinc(number) :: number
+  def sinc(x) when is_number(x) do
+    do_sinc(x)
+  end
+  defp do_sinc(x) when x == 0 do
+    1
+  end
+  defp do_sinc(x) when x != 0 do
+    :math.sin(:math.pi * x)/(:math.pi * x)
+  end
+
 end
