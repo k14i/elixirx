@@ -104,6 +104,30 @@ defmodule MathX do
   end
 
   @doc """
+  Returns the product of all positive integers less than or equal to `n`.
+  The value of 0! is 1.
+
+  ## Examples
+
+    iex> MathX.factorial(0)
+    1
+    iex> MathX.factorial(4)
+    24
+
+  """
+  @spec factorial(integer) :: integer
+  def factorial(x) when is_integer(x) and x >= 0 do
+    cond do
+      x == 0 ->
+        1
+      x == 1 ->
+        x
+      true ->
+        x * factorial(x - 1)
+    end
+  end
+
+  @doc """
   Compute the sqrt of (x^2 + y^2).
 
   ## Examples

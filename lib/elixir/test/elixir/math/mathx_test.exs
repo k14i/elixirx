@@ -56,6 +56,12 @@ defmodule MathXTest do
     assert MathX.average([1, 2, 3, 5, 8, 13, 21, 34]) == 10.875
   end
 
+  test :factorial do
+    assert MathX.factorial(0) == 1
+    assert MathX.factorial(1) == 1
+    assert MathX.factorial(4) == 24
+  end
+
   test :hypot do
     assert MathX.hypot(2,3) == 3.605551275463989
   end
