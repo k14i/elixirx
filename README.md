@@ -41,6 +41,7 @@ This repository aims to make [Elixir][1] itself simpler, easier, more convenient
 * `median/1`
 * `average/1`
 * `hypot/2`
+* `sinc/1`
 
   [1]: https://github.com/elixir-lang/elixir
 

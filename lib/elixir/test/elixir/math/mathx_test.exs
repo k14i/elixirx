@@ -60,4 +60,9 @@ defmodule MathXTest do
     assert MathX.hypot(2,3) == 3.605551275463989
   end
 
+  test :sinc do
+    assert MathX.sinc(0) == 1
+    assert MathX.sinc(10) == -3.898171832519376e-17
+  end
+
 end
