@@ -71,4 +71,9 @@ defmodule MathXTest do
     assert MathX.sinc(10) == -3.898171832519376e-17
   end
 
+  test :cosc do
+    assert MathX.cosc(0) == 0
+    assert MathX.cosc(-10) == -0.1
+  end
+
 end

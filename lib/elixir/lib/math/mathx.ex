@@ -163,4 +163,26 @@ defmodule MathX do
     :math.sin(:math.pi * x)/(:math.pi * x)
   end
 
+  @doc """
+  Compute cos(pi * x)/x - sin(pi * x)/(pi * x^2) if x != 0, and 0 if x == 0.
+
+  ## Examples
+
+    iex> MathX.cosc(0)
+    0
+    iex> MathX.cosc(-10)
+    -0.1
+
+  """
+  @spec cosc(number) :: number
+  def cosc(x) when is_number(x) do
+    do_cosc(x)
+  end
+  defp do_cosc(x) when x == 0 do
+    0
+  end
+  defp do_cosc(x) when x != 0 do
+    :math.cos(:math.pi * x)/x - :math.sin(:math.pi * x)/(:math.pi * :math.pow(x,2))
+  end
+
 end
