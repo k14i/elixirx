@@ -185,4 +185,20 @@ defmodule MathX do
     :math.cos(:math.pi * x)/x - :math.sin(:math.pi * x)/(:math.pi * :math.pow(x,2))
   end
 
+  @doc """
+  Return x ^ 1/3.
+
+  ## Examples
+
+    iex> MathX.cbrt(8)
+    2.0
+    iex> MathX.cbrt(27)
+    3.0
+
+  """
+  @spec cbrt(number) :: number
+  def cbrt(x) when is_number(x) do
+    :math.pow(x, 1/3)
+  end
+
 end
