@@ -194,11 +194,25 @@ defmodule MathX do
     2.0
     iex> MathX.cbrt(27)
     3.0
+    iex> MathX.cbrt(1000)
+    10.0
 
   """
   @spec cbrt(number) :: number
   def cbrt(x) when is_number(x) do
-    :math.pow(x, 1/3)
+    result = :math.pow(x, 1/3)
+    cond do
+      is_float(result) == false ->
+        result
+      true ->
+        result_14 = Float.round(result, 14)
+        result_15 = Float.round(result, 15)
+        if result_14 != result_15 do
+          result_14
+        else
+          result
+        end
+    end
   end
 
 end
