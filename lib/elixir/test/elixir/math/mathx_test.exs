@@ -76,4 +76,9 @@ defmodule MathXTest do
     assert MathX.cosc(-10) == -0.1
   end
 
+  test :cbrt do
+    assert MathX.cbrt(8) == 2.0
+    assert MathX.cbrt(27) == 3.0
+  end
+
 end
