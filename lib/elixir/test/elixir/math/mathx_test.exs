@@ -79,6 +79,7 @@ defmodule MathXTest do
   test :cbrt do
     assert MathX.cbrt(8) == 2.0
     assert MathX.cbrt(27) == 3.0
+    assert MathX.cbrt(1000) == 10.0
   end
 
 end
