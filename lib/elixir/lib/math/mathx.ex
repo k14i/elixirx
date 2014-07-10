@@ -205,9 +205,10 @@ defmodule MathX do
       is_float(result) == false ->
         result
       true ->
+        result_ceil = Float.ceil(result)
         result_14 = Float.round(result, 14)
         result_15 = Float.round(result, 15)
-        if result_14 != result_15 do
+        if result_14 != result_15 and result_14 == result_ceil do
           result_14
         else
           result
