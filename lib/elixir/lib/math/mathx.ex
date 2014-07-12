@@ -37,6 +37,20 @@ defmodule MathX do
   end
 
   @doc """
+  Returns quotient rounded towards `-Inf` of the floored division.
+
+  ## Examples
+
+      iex> MathX.fld(79, 31)
+      2
+
+  """
+  @spec fld(number, number) :: number
+  def fld(dividend, divisor) when is_number(dividend) and is_number(divisor) do
+    Float.floor(dividend / divisor)
+  end
+
+  @doc """
   Determines if an integer is even.
 
   Returns `true` if `n` is an even number, otherwise `false`.
