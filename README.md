@@ -42,6 +42,7 @@ This repository aims to make [Elixir][1] itself simpler, easier, more convenient
 * `median/1`
 * `average/1`
 * `factorial/1`
+* `trunc/1`
 * `hypot/2`
 * `sinc/1`
 * `cosc/1`

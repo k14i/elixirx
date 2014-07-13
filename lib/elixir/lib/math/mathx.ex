@@ -142,6 +142,32 @@ defmodule MathX do
   end
 
   @doc """
+  Returns a value rounding `n` towards zero.
+
+  ## Examples
+
+    iex> MathX.trunc(1.1)
+    1
+    iex> MathX.trunc(0)
+    0
+    iex> MathX.trunc(-0.9)
+    0
+    iex> MathX.trunc(-1.1)
+    -1
+
+  """
+  @spec trunc(number) :: number
+  def trunc(x) when is_number(x) do
+    do_trunc(x)
+  end
+  defp do_trunc(x) when x >= 0 do
+    Float.floor(x)
+  end
+  defp do_trunc(x) when x < 0 do
+    Float.floor(x) + 1
+  end
+
+  @doc """
   Compute the sqrt of (x^2 + y^2).
 
   ## Examples

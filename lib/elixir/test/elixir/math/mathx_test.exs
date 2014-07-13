@@ -72,6 +72,14 @@ defmodule MathXTest do
     assert MathX.factorial(4) == 24
   end
 
+  test :trunc do
+    assert MathX.trunc(1.1) == 1
+    assert MathX.trunc(0.9) == 0
+    assert MathX.trunc(0) == 0
+    assert MathX.trunc(-0.9) == 0
+    assert MathX.trunc(-1.1) == -1
+  end
+
   test :hypot do
     assert MathX.hypot(2,3) == 3.605551275463989
   end
