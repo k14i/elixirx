@@ -256,4 +256,24 @@ defmodule MathX do
     end
   end
 
+  @doc """
+  Returns if `dvidend` can be divided by `divisor`.
+
+  ## Examples
+
+    iex> MathX.is_submultiple(4,2)
+    true
+    iex> MathX.is_submultiple(5,2)
+    false
+
+  """
+  @spec is_submultiple(number, number) :: boolean
+  def is_submultiple(dividend, divisor) do
+    if rem(dividend, divisor) == 0 do
+      true
+    else
+      false
+    end
+  end
+
 end
