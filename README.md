@@ -47,6 +47,7 @@ This repository aims to make [Elixir][1] itself simpler, easier, more convenient
 * `sinc/1`
 * `cosc/1`
 * `cbrt/1`
+* `is_submultiple/2`
 
   [1]: https://github.com/elixir-lang/elixir
 

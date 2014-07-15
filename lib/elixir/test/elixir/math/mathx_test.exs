@@ -100,4 +100,13 @@ defmodule MathXTest do
     assert MathX.cbrt(1000) == 10.0
   end
 
+  test :is_submultiple do
+    assert MathX.is_submultiple(4,2) == true
+    assert MathX.is_submultiple(5,2) == false
+    assert MathX.is_submultiple(-4,2) == true
+    assert MathX.is_submultiple(-5,2) == false
+    assert MathX.is_submultiple(4,-2) == true
+    assert MathX.is_submultiple(5,-2) == false
+  end
+
 end
