@@ -37,6 +37,20 @@ defmodule MathX do
   end
 
   @doc """
+  Returns a tuple of the result of division and remainder.
+
+  ## Examples
+
+      iex> MathX.divrem(11, 3)
+      {3, 2}
+
+  """
+  @spec divrem(number, number) :: tuple
+  def divrem(dividend, divisor) when is_number(dividend) and is_number(divisor) do
+    {Kernel.div(dividend,divisor), Kernel.rem(dividend,divisor)}
+  end
+
+  @doc """
   Returns quotient rounded towards `-Inf` of the floored division.
 
   ## Examples

@@ -18,6 +18,14 @@ defmodule MathXTest do
     assert MathX.remainder(0, 1) == 0
   end
 
+  test :divrem do
+    assert MathX.divrem(11, 3) == {3, 2}
+    assert MathX.divrem(-11, 3) == {-3, -2}
+    assert MathX.divrem(11, -3) == {-3, 2}
+    assert MathX.divrem(-11, -3) == {3, -2}
+    assert MathX.divrem(0, 3) == {0, 0}
+  end
+
   test :fld do
     assert MathX.fld(79, 31) == 2
     assert MathX.fld(64, 16) == 4
