@@ -36,6 +36,7 @@ This repository aims to make [Elixir][1] itself simpler, easier, more convenient
 
 * `absolute/1`
 * `remainder/2`
+* `divrem/2`
 * `fld/2`
 * `even?/1`
 * `odd?/1`
