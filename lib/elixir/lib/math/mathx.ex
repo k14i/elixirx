@@ -51,7 +51,7 @@ defmodule MathX do
   end
 
   @doc """
-  Return the absolute value of an argument.
+  Returns the absolute value of an argument.
 
   ## Examples
 
@@ -70,7 +70,7 @@ defmodule MathX do
   end
 
   @doc """
-  Return the remainder value of 2nd argument into 1st argument.
+  Returns the remainder value of 2nd argument into 1st argument.
 
   ## Examples
 
@@ -122,7 +122,7 @@ defmodule MathX do
   end
 
   @doc """
-  Return x ^ 1/3.
+  Returns x ^ 1/3.
 
   ## Examples
 
@@ -213,7 +213,7 @@ defmodule MathX do
   end
 
   @doc """
-  Return the median of a number list.
+  Returns the median of a number list.
 
   ## Examples
 
