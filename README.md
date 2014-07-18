@@ -31,6 +31,7 @@ This repository aims to make [Elixir][1] itself simpler, easier, more convenient
 * `separate_key_value/1`
 * `replace_all/2`
 * `fill/2`
+* `fill/3`
 
 ### MathX
 
