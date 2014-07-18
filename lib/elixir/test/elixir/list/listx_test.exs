@@ -25,6 +25,7 @@ defmodule ListXTest do
 
   test :fill do
     assert ListX.fill(8, nil) == [nil, nil, nil, nil, nil, nil, nil, nil]
+    assert ListX.fill([1,2,3], 8, nil) == [1, 2, 3, nil, nil, nil, nil, nil]
   end
 
 end

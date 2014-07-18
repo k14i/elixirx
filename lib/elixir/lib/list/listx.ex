@@ -130,4 +130,18 @@ defmodule ListX do
     end
   end
 
+  @doc """
+  Fullfill a collection with the specified numbers of value keeping the given one.
+
+  ## Examples
+
+      iex> ListX.fill([1,2,3], 8, nil)
+      [1, 2, 3, nil, nil, nil, nil, nil]
+
+  """
+  @spec fill(list, integer, any) :: list
+  def fill(list, num, value) do
+    do_fill(list, num, value)
+  end
+
 end
